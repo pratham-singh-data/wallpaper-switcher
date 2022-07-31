@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/background_gradient">
+
+    <LinearLayout
+        android:id="@+id/searchLinearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="20dp"
+        android:background="@drawable/search_gradient"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginVertical="20dp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp">
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/search"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/transparent"/>
+
+        <ImageButton
+            android:id="@+id/searchImageButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_marginStart="-50dp"
+            android:scaleType="centerCrop"
+            android:backgroundTint="@color/transparent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/shortcutLinearLayoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchLinearlayout"
+        android:layout_marginVertical="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/shortcutLinearLayoutRow1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginVertical="5dp"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/natureCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/nature_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/nature"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/abstractCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/abstract_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/abstractString"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/shortcutLinearLayoutRow2"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            android:layout_height="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/seaCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sea_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/sea"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cityCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/city_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/city"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/shortcutLinearLayoutRow3"
+            android:layout_width="match_parent"
+            android:layout_marginVertical="5dp"
+            android:layout_height="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/spaceCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/space_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/space"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/trendingCard"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:cardCornerRadius="20dp"
+                android:backgroundTint="@color/transparent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/trending_gradient"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/trending"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:textSize="22sp"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/wallpaperRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shortcutLinearLayoutContainer"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
